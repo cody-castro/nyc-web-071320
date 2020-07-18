@@ -41,5 +41,6 @@ Post -> Tags
 - Methods...
     - find_all_in_shelter: which find all the animals that are curently in a shelter
     - find_all_adopted: which find all the animals that are curently adopted / have an owner
-    - find_by_shelter: by shelter name
+    - find_by_shelter: by shelter name. Find all animals currently in a specific shelter instance
+    
     - ... the world is your oyster!

@@ -1,17 +1,14 @@
 require 'pry'
+
 class User
-    attr_reader :views
-    attr_writer :ssn
-    attr_accessor :name, :age, :height, :nickname 
+    attr_accessor :name, :age, :nickname 
     @@all = []
 
-    def initialize(name, age, ssn, nickname=nil)
+    def initialize(name, age, nickname=nil)
         @name = name
         @age = age
-        @ssn = ssn
         @nickname = nickname
-        User.all << self
-        @views = 0
+        @@all << self
     end
 
     def self.all
@@ -51,8 +48,6 @@ class User
     ## a method thats us search for a specific species 
 
 
-
-
     def adopt_animal(animal_instance) # bob
         if self.pets.count < 3
             animal_instance.owner = self #self is the current user instance
@@ -65,13 +60,6 @@ class User
         Animal.all.select do |a|
             a.owner == self
         end
-    end
-
-    private
-
-
-    def increment_views
-        @views += 1
     end
 
 
