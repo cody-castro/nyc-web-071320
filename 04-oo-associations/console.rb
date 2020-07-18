@@ -31,9 +31,6 @@ lil = Animal.new("dog", "Lil")
 burger = Animal.new("hamster", "Burger")
 
 
-
-
-
 binding.pry
 
 "yerrr"

@@ -28,6 +28,19 @@ class Shelter
     end
 ### I struggle with this ^
 
+    def self.find_all_in_shelter #Show me all the animals living in all shelters
+        Animal.all.map { |animals| animals.shelter }
+    end
+    ## Can't seem to get the return to include also the animal instance, only getting the shelter back sans animal info
+
+    def self.find_all_adopted
+        Animal.all.map {|animals| animals.owner}
+    end
+
+    def self.find_by_shelter(shelter_instance) 
+        shelter_instance.animals
+    end
+
 
 
 end
